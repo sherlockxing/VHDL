@@ -27,7 +27,7 @@ b)	light_flow模块：跑马灯控制模块，每1s跳变一次，当按下开�
 5)	在如下界面可以对文件light_flow_clk_rst进行编辑；
  
 6)	FPGA的外部晶振时钟为50MHz，设计中所用时钟为10MHz，需要例化PLL锁相环IP核，重复第4步，然后选择IP(CORE Generator & Architecture Wizard)；
- ![Alt text](./1.jpg)
+ ![Alt text](./pll.png)
 
 7)	选择IP核的类型：选择FPGA Features and Design→Clocking→Clocking Wizard；
  
