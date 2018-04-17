@@ -1,4 +1,4 @@
-# 跑马灯实验
+﻿# 跑马灯实验
 
 ## 设计目的
 通过逻辑设计实现LED灯的控制。
@@ -15,7 +15,7 @@ b)	light_flow模块：跑马灯控制模块，每1s跳变一次，当按下开�
  
 ## 设计步骤如下：
 1)	打开ISE Design Suite 14.6，点击File→New Project名称为light_flow，点击Next；
-![Alt text](./1.jpg)
+
 
 2)	点击Next，出现如下界面：Family、Device、Package、Speed为所用FPGA型号，选择如图所示，点击next然后点击Finish；
  
@@ -27,7 +27,7 @@ b)	light_flow模块：跑马灯控制模块，每1s跳变一次，当按下开�
 5)	在如下界面可以对文件light_flow_clk_rst进行编辑；
  
 6)	FPGA的外部晶振时钟为50MHz，设计中所用时钟为10MHz，需要例化PLL锁相环IP核，重复第4步，然后选择IP(CORE Generator & Architecture Wizard)；
- 
+ ![Alt text](./1.jpg)
 
 7)	选择IP核的类型：选择FPGA Features and Design→Clocking→Clocking Wizard；
  
