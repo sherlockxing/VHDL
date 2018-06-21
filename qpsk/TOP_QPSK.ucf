@@ -1,0 +1,132 @@
+#PACE: Start of PACE I/O Pin Assignments
+#CLK
+#NET "CLK_40M"  LOC = "E16";
+#NET "CLK_40M" CLOCK_DEDICATED_ROUTE = FALSE;  
+#NET "CLK_40M"  period = 25ns High 50%;
+
+#input clk
+net "CLK_40M" loc = "E16";// | iostandard = LVCMOS33;  //40MHZ
+NET "CLK_40M" CLOCK_DEDICATED_ROUTE = FALSE; 
+
+#input rst
+NET "rst_n"  LOC = "Y8";// | IOSTANDARD = LVCMOS33 | PULLUP | NODELAY;//BUTTON2 SW2
+NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE;
+
+##########################################
+##  constraints for config
+##########################################
+net "o_cdce62002_spi_clk" loc = "AA10";// | iostandard = LVCMOS33;//SCLK
+net "o_cdce62002_spi_mosi" loc = "Y9";// | iostandard = LVCMOS33;//MOSI
+net "i_cdce62002_spi_miso" loc = "AB9";// | iostandard = LVCMOS33;//MISO
+net "i_cdce62002_pll_lock" loc = "V11";// | iostandard = LVCMOS33;//PLLLOCK
+net "o_cdce62002_spi_le" loc = "AB10";// | iostandard = LVCMOS33;//LE
+net "o_cdce62002_pd_n" loc = "W11";// | iostandard = LVCMOS33;//PD
+
+net "o_clk_sel" loc = "W10";// | iostandard = LVCMOS33;//EXTCLK_SEL
+
+
+net "i_ADCA_clk" loc = "K22";
+net "i_ADCB_clk" loc = "K21";
+net "led<1>" loc = "P22";
+net "led<2>" loc = "P21";
+net "led<3>" loc = "N22";
+
+net "i_DACP_clk" loc = "L20";
+NET "i_DACP_clk" CLOCK_DEDICATED_ROUTE = FALSE; 
+
+#####sw2######
+NET "SW2[0]"  LOC = "V13"; 
+NET "SW2[1]"  LOC = "U14"; 
+NET "SW2[2]"  LOC = "T15"; 
+NET "SW2[3]"  LOC = "AB17";
+#NET "rst_n"  LOC = "Y8";
+
+######DA#####################
+net "out_da0_wr" loc = "K20"; 
+net "out_da1_wr" loc = "H22";
+
+net "out_da0_data<0>" loc = "H18" ;
+net "out_da0_data<1>" loc = "H20" ;
+net "out_da0_data<2>" loc = "E22" ;
+net "out_da0_data<3>" loc = "H19";
+net "out_da0_data<4>" loc = "J20" ;
+net "out_da0_data<5>" loc = "G20" ;
+net "out_da0_data<6>" loc = "F22" ;
+net "out_da0_data<7>" loc = "F20" ;
+net "out_da0_data<8>" loc = "F21" ;
+net "out_da0_data<9>" loc = "E20" ;
+net "out_da0_data<10>" loc = "H21" ;
+net "out_da0_data<11>" loc = "D21" ;
+#
+net "out_da1_data<0>" loc = "P19" ;
+net "out_da1_data<1>" loc = "R15" ;
+net "out_da1_data<2>" loc = "M20" ;
+net "out_da1_data<3>" loc = "N15" ;
+net "out_da1_data<4>" loc = "M16" ;
+net "out_da1_data<5>" loc = "L17" ;
+net "out_da1_data<6>" loc = "L22" ;
+net "out_da1_data<7>" loc = "L19" ;
+net "out_da1_data<8>" loc = "K17" ;
+net "out_da1_data<9>" loc = "J22" ;
+net "out_da1_data<10>" loc = "K19" ;
+net "out_da1_data<11>" loc = "K18" ;
+
+#######################################LCD###############################################
+net "LCDR<0>" loc = "F14";
+net "LCDR<1>" loc = "H14";
+net "LCDR<2>" loc = "G13";
+net "LCDR<3>" loc = "V20";
+net "LCDR<4>" loc = "F15";
+net "LCDR<5>" loc = "H13";
+net "LCDR<6>" loc = "H12";
+net "LCDR<7>" loc = "V19";
+
+#
+net "LCDB<0>" loc = "B22";
+net "LCDB<1>" loc = "B21";
+net "LCDB<2>" loc = "H17";
+net "LCDB<3>" loc = "F19";
+net "LCDB<4>" loc = "F18";
+net "LCDB<5>" loc = "C19";
+net "LCDB<6>" loc = "H16";
+net "LCDB<7>" loc = "C18";
+
+#
+net "LCDG<0>" loc = "F16";
+net "LCDG<1>" loc = "G15";
+net "LCDG<2>" loc = "A20";
+net "LCDG<3>" loc = "B20";
+net "LCDG<4>" loc = "A19";
+net "LCDG<5>" loc = "B18";
+net "LCDG<6>" loc = "D17";
+net "LCDG<7>" loc = "A18";
+
+
+net "HS" loc = "F9";
+net "VS" loc = "F10"; 
+net "out_lcdpwr_on" loc = "A4"; //DISP_EN
+net "DE" loc = "G11";//DSS_ACBIAS
+net "DCLK" loc = "H11";//PCLK
+
+net "LR" loc = "D5";
+net "UD" loc = "E6";
+
+###########DigShow##############
+#seg_select
+NET "DATA_OUT[0]"   LOC = "T4"; 
+NET "DATA_OUT[1]"   LOC = "P6"; 
+NET "DATA_OUT[2]"   LOC = "T3"; 
+NET "DATA_OUT[3]"   LOC = "N6"; 
+NET "DATA_OUT[4]"   LOC = "N7"; 
+NET "DATA_OUT[5]"   LOC = "U4"; 
+NET "DATA_OUT[6]"   LOC = "R4"; 
+NET "DATA_OUT[7]"   LOC = "P7"; 
+#dig_select
+NET "DATA_OUT[15]"   LOC = "P5"; 
+NET "DATA_OUT[8]"   LOC = "P4"; 
+NET "DATA_OUT[9]"  LOC = "AA2"; 
+NET "DATA_OUT[10]"  LOC = "AA1"; 
+NET "DATA_OUT[11]"  LOC = "T6"; 
+NET "DATA_OUT[12]"  LOC = "T5"; 
+NET "DATA_OUT[13]"  LOC = "V5"; 
+NET "DATA_OUT[14]"  LOC = "V3"; 
